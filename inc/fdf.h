@@ -8,6 +8,11 @@
 # include <math.h>
 # include <stdio.h>
 
+# define WIN_WIDTH 1280
+# define WIN_HEIGHT 720 
+/*COLORS*/
+# define WHITE 0xFFFFFF
+
 typedef struct s_img
 {
   void *img;
@@ -23,6 +28,14 @@ typedef struct s_fdf
   int fd;
   int map_width;
   int map_height;
+  int trans_x;
+  int trans_y;
+  float alt_zoom;
+  float angle_x;
+  float angle_y;
+  float angle_z;
+  float zoom;
+  int color;
 } t_fdf;
 
 typedef struct s_parse
@@ -34,6 +47,9 @@ typedef struct s_parse
   int words_amount;
   int prev_words_amount;
 } t_parse;
+
+/*ft_initfdf.c*/
+void ft_initfdf(t_fdf *fdf);
 
 /*parser_utils.c*/
 void ft_error(char *message);
@@ -47,6 +63,10 @@ void ft_parser(t_fdf *fdf, t_parse *temps, char *path);
 
 /*ft_get_nextline.c*/
 char *ft_get_nextline(int fd);
+
+/*draw_utils.c*/
+float ft_degtorad(int deg);
+int ft_get_zoom(int map_width, int map_height);
 
 
 #endif

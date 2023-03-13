@@ -16,6 +16,8 @@ FILES	:= ft_parser.c\
 				 parser_utils.c\
 				 parser_utils.c\
 				 ft_get_nextline.c\
+				 ft_initfdf.c\
+				 draw_utils.c\
 
 OBJ		:= $(FILES:%.c=$(OBJDIR)/%.o)
 
