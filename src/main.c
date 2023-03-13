@@ -9,4 +9,5 @@ int main (int argc, char *argv[])
     if (argc != 2)
         ft_error("Error: wrong arguments");
     ft_parser(&fdf, &temps, argv[1]);
+    ft_initfdf(&fdf);
 }
