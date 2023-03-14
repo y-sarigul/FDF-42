@@ -12,12 +12,14 @@
 
 OBJDIR	:= ../../obj
 CFLAGS	:= -I ../../inc -c
-FILES	:= ft_parser.c\
-				 parser_utils.c\
-				 parser_utils.c\
+FILES	:= draw.c\
+				 draw_utils.c\
+				 drawline.c\
 				 ft_get_nextline.c\
 				 ft_initfdf.c\
-				 draw_utils.c\
+				 ft_parser.c\
+				 parser_utils.c\
+
 
 OBJ		:= $(FILES:%.c=$(OBJDIR)/%.o)
 
